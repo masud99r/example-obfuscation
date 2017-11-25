@@ -51,7 +51,206 @@ public long k(s arg0)
     return l = 0L;
   }
 
+//java bytecode
+public long k(a2dp.Vol.s);
+    Code:
+       0: aload_1       
+       1: getfield      #123                // Field a2dp/Vol/s.F:Ljava/lang/String;
+       4: dup           
+       5: astore        5
+       7: dup           
+       8: astore        4
+      10: ifnonnull     21
+      13: ldc_w         #300                // String {aEaAx@/jjXfMj
+      16: invokestatic  #248                // Method android/support/v4/app/FragmentTransaction.k:(Ljava/lang/String;)Ljava/lang/String;
+      19: astore        4
+      21: aload_0       
+      22: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+      25: iconst_1      
+      26: aload         4
+      28: invokevirtual #129                // Method android/database/sqlite/SQLiteStatement.bindString:(ILjava/lang/String;)V
+      31: aload_1       
+      32: getfield      #130                // Field a2dp/Vol/s.f:Ljava/lang/String;
+      35: dup           
+      36: astore        5
+      38: ifnonnull     45
+      41: aload         4
+      43: astore        5
+      45: aload_0       
+      46: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+      49: iconst_2      
+      50: aload         5
+      52: invokevirtual #129                // Method android/database/sqlite/SQLiteStatement.bindString:(ILjava/lang/String;)V
+      55: aload_1       
+      56: getfield      #48                 // Field a2dp/Vol/s.j:Ljava/lang/String;
+      59: ifnonnull     68
+      62: ldc2_w        #131                // long -1l
+      65: dup2          
+      66: lstore_2      
+      67: lreturn       
+      68: aload_0       
+      69: dup           
+      70: dup_x1        
+      71: dup2          
+      72: dup2          
+      73: dup2          
+      74: dup2          
+      75: dup2          
+      76: dup2          
+      77: dup2          
+      78: dup2          
+      79: dup2          
+      80: dup2          
+      81: dup2          
+      82: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+      85: iconst_3      
+      86: aload_1       
+      87: getfield      #48                 // Field a2dp/Vol/s.j:Ljava/lang/String;
+      90: invokevirtual #129                // Method android/database/sqlite/SQLiteStatement.bindString:(ILjava/lang/String;)V
+      93: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+      96: iconst_4      
+      97: aload_1       
+      98: invokevirtual #133                // Method a2dp/Vol/s.k:()I
+     101: i2l           
+     102: invokevirtual #137                // Method android/database/sqlite/SQLiteStatement.bindLong:(IJ)V
+     105: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+     108: iconst_5      
+     109: aload_1       
+     110: invokevirtual #139                // Method a2dp/Vol/s.K:()J
+     113: invokevirtual #137                // Method android/database/sqlite/SQLiteStatement.bindLong:(IJ)V
+     116: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+     119: bipush        6
+     121: aload_1       
+     122: invokevirtual #140                // Method a2dp/Vol/s.A:()J
+     125: invokevirtual #137                // Method android/database/sqlite/SQLiteStatement.bindLong:(IJ)V
+     128: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+     131: bipush        7
+     133: aload_1       
+     134: invokevirtual #141                // Method a2dp/Vol/s.k:()Ljava/lang/String;
+     137: invokevirtual #129                // Method android/database/sqlite/SQLiteStatement.bindString:(ILjava/lang/String;)V
+     140: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+     143: bipush        8
+     145: aload_1       
+     146: invokevirtual #142                // Method a2dp/Vol/s.h:()Ljava/lang/String;
+     149: invokevirtual #129                // Method android/database/sqlite/SQLiteStatement.bindString:(ILjava/lang/String;)V
+     152: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+     155: bipush        9
+     157: aload_1       
+     158: invokevirtual #143                // Method a2dp/Vol/s.L:()J
+     161: invokevirtual #137                // Method android/database/sqlite/SQLiteStatement.bindLong:(IJ)V
+     164: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+     167: bipush        10
+     169: aload_1       
+     170: invokevirtual #144                // Method a2dp/Vol/s.E:()Ljava/lang/String;
+     173: invokevirtual #129                // Method android/database/sqlite/SQLiteStatement.bindString:(ILjava/lang/String;)V
+     176: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+     179: bipush        11
+     181: aload_1       
+     182: invokevirtual #145                // Method a2dp/Vol/s.I:()Ljava/lang/String;
+     185: invokevirtual #129                // Method android/database/sqlite/SQLiteStatement.bindString:(ILjava/lang/String;)V
+     188: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+     191: bipush        12
+     193: aload_1       
+     194: invokevirtual #146                // Method a2dp/Vol/s.A:()Ljava/lang/String;
+     197: invokevirtual #129                // Method android/database/sqlite/SQLiteStatement.bindString:(ILjava/lang/String;)V
+     200: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+     203: bipush        13
+     205: aload_1       
+     206: invokevirtual #147                // Method a2dp/Vol/s.D:()J
+     209: invokevirtual #137                // Method android/database/sqlite/SQLiteStatement.bindLong:(IJ)V
+     212: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+     215: bipush        14
+     217: aload_1       
+     218: invokevirtual #148                // Method a2dp/Vol/s.b:()J
+     221: invokevirtual #137                // Method android/database/sqlite/SQLiteStatement.bindLong:(IJ)V
+     224: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+     227: bipush        15
+     229: aload_1       
+     230: invokevirtual #149                // Method a2dp/Vol/s.c:()J
+     233: invokevirtual #137                // Method android/database/sqlite/SQLiteStatement.bindLong:(IJ)V
+     236: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+     239: bipush        16
+     241: aload_1       
+     242: invokevirtual #150                // Method a2dp/Vol/s.h:()I
+     245: i2l           
+     246: invokevirtual #137                // Method android/database/sqlite/SQLiteStatement.bindLong:(IJ)V
+     249: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+     252: bipush        17
+     254: aload_1       
+     255: invokevirtual #151                // Method a2dp/Vol/s.E:()J
+     258: invokevirtual #137                // Method android/database/sqlite/SQLiteStatement.bindLong:(IJ)V
+     261: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+     264: bipush        18
+     266: aload_1       
+     267: invokevirtual #152                // Method a2dp/Vol/s.I:()J
+     270: invokevirtual #137                // Method android/database/sqlite/SQLiteStatement.bindLong:(IJ)V
+     273: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+     276: bipush        19
+     278: aload_1       
+     279: invokevirtual #153                // Method a2dp/Vol/s.I:()I
+     282: i2l           
+     283: invokevirtual #137                // Method android/database/sqlite/SQLiteStatement.bindLong:(IJ)V
+     286: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+     289: bipush        20
+     291: aload_1       
+     292: invokevirtual #154                // Method a2dp/Vol/s.L:()I
+     295: i2l           
+     296: invokevirtual #137                // Method android/database/sqlite/SQLiteStatement.bindLong:(IJ)V
+     299: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+     302: bipush        21
+     304: aload_1       
+     305: invokevirtual #155                // Method a2dp/Vol/s.A:()I
+     308: i2l           
+     309: invokevirtual #137                // Method android/database/sqlite/SQLiteStatement.bindLong:(IJ)V
+     312: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+     315: bipush        22
+     317: aload_1       
+     318: invokevirtual #156                // Method a2dp/Vol/s.b:()I
+     321: i2l           
+     322: invokevirtual #137                // Method android/database/sqlite/SQLiteStatement.bindLong:(IJ)V
+     325: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+     328: bipush        23
+     330: aload_1       
+     331: invokevirtual #157                // Method a2dp/Vol/s.h:()J
+     334: invokevirtual #137                // Method android/database/sqlite/SQLiteStatement.bindLong:(IJ)V
+     337: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+     340: bipush        24
+     342: aload_1       
+     343: invokevirtual #158                // Method a2dp/Vol/s.j:()J
+     346: invokevirtual #137                // Method android/database/sqlite/SQLiteStatement.bindLong:(IJ)V
+     349: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+     352: bipush        25
+     354: aload_1       
+     355: invokevirtual #159                // Method a2dp/Vol/s.k:()J
+     358: invokevirtual #137                // Method android/database/sqlite/SQLiteStatement.bindLong:(IJ)V
+     361: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+     364: bipush        26
+     366: aload_1       
+     367: invokevirtual #160                // Method a2dp/Vol/s.l:()J
+     370: invokevirtual #137                // Method android/database/sqlite/SQLiteStatement.bindLong:(IJ)V
+     373: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+     376: bipush        27
+     378: aload_1       
+     379: invokevirtual #161                // Method a2dp/Vol/s.J:()J
+     382: invokevirtual #137                // Method android/database/sqlite/SQLiteStatement.bindLong:(IJ)V
+     385: aload_0       
+     386: getfield      #36                 // Field G:Landroid/database/sqlite/SQLiteStatement;
+     389: invokevirtual #164                // Method android/database/sqlite/SQLiteStatement.executeInsert:()J
+     392: lstore_2      
+     393: lload_2       
+     394: lreturn       
+     395: astore_1      
+     396: lconst_0      
+     397: dup2          
+     398: lstore_2      
+     399: aload_1       
+     400: invokevirtual #167                // Method java/lang/Exception.printStackTrace:()V
+     403: lreturn       
+    Exception table:
+       from    to  target type
+         385   393   395   Class java/lang/Exception
 
+//class file corresponding to sevice$11.class
 package a2dp.Vol;
 
 import android.bluetooth.BluetoothAdapter;
