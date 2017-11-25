@@ -266,3 +266,58 @@ public long insert(a2dp.Vol.btDevice);
     Exception table:
        from    to  target type
          399   407   410   Class java/lang/Exception
+
+package a2dp.Vol;
+
+import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
+import android.bluetooth.IBluetoothA2dp;
+import android.bluetooth.IBluetoothA2dp.Stub;
+import android.content.ComponentName;
+import android.content.ServiceConnection;
+import android.os.IBinder;
+import android.os.RemoteException;
+import java.util.Iterator;
+import java.util.Set;
+
+final class service$11
+  implements ServiceConnection
+{
+  public void onServiceConnected(ComponentName paramComponentName, IBinder paramIBinder)
+  {
+    service.mIsBound = true;
+    service.ibta2 = IBluetoothA2dp.Stub.asInterface(paramIBinder);
+    paramIBinder = BluetoothAdapter.getDefaultAdapter().getBondedDevices();
+    paramComponentName = null;
+    Iterator localIterator = paramIBinder.iterator();
+    while (localIterator.hasNext())
+    {
+      paramIBinder = (BluetoothDevice)localIterator.next();
+      if (paramIBinder.getAddress().equalsIgnoreCase(service.DeviceToConnect)) {
+        paramComponentName = paramIBinder;
+      }
+    }
+    if (paramComponentName != null) {}
+    try
+    {
+      service.ibta2.connect(paramComponentName);
+      return;
+    }
+    catch (RemoteException paramComponentName)
+    {
+      for (;;)
+      {
+        paramComponentName.printStackTrace();
+      }
+    }
+  }
+  
+  public void onServiceDisconnected(ComponentName paramComponentName)
+  {
+    service.mIsBound = false;
+    service.doUnbind(service.access$600());
+  }
+
+}
+
+//bytecode
