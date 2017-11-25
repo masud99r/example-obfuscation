@@ -321,3 +321,63 @@ final class service$11
 }
 
 //bytecode
+final class a2dp.Vol.service$11 implements android.content.ServiceConnection {
+  a2dp.Vol.service$11();
+    Code:
+       0: aload_0
+       1: invokespecial #12                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  public void onServiceConnected(android.content.ComponentName, android.os.IBinder);
+    Code:
+       0: iconst_1
+       1: putstatic     #21                 // Field a2dp/Vol/service.mIsBound:Z
+       4: aload_2
+       5: invokestatic  #27                 // Method android/bluetooth/IBluetoothA2dp$Stub.asInterface:(Landroid/os/IBinder;)Landroid/bluetooth/IBluetoothA2dp;
+       8: putstatic     #31                 // Field a2dp/Vol/service.ibta2:Landroid/bluetooth/IBluetoothA2dp;
+      11: invokestatic  #37                 // Method android/bluetooth/BluetoothAdapter.getDefaultAdapter:()Landroid/bluetooth/BluetoothAdapter;
+      14: invokevirtual #41                 // Method android/bluetooth/BluetoothAdapter.getBondedDevices:()Ljava/util/Set;
+      17: astore_2
+      18: aconst_null
+      19: astore_1
+      20: aload_2
+      21: invokeinterface #47,  1           // InterfaceMethod java/util/Set.iterator:()Ljava/util/Iterator;
+      26: astore_3
+      27: aload_3
+      28: invokeinterface #53,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+      33: ifeq          64
+      36: aload_3
+      37: invokeinterface #57,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      42: checkcast     #59                 // class android/bluetooth/BluetoothDevice
+      45: astore_2
+      46: aload_2
+      47: invokevirtual #63                 // Method android/bluetooth/BluetoothDevice.getAddress:()Ljava/lang/String;
+      50: getstatic     #67                 // Field a2dp/Vol/service.DeviceToConnect:Ljava/lang/String;
+      53: invokevirtual #73                 // Method java/lang/String.equalsIgnoreCase:(Ljava/lang/String;)Z
+      56: ifeq          27
+      59: aload_2
+      60: astore_1
+      61: goto          27
+      64: aload_1
+      65: ifnull        78
+      68: getstatic     #31                 // Field a2dp/Vol/service.ibta2:Landroid/bluetooth/IBluetoothA2dp;
+      71: aload_1
+      72: invokeinterface #79,  2           // InterfaceMethod android/bluetooth/IBluetoothA2dp.connect:(Landroid/bluetooth/BluetoothDevice;)Z
+      77: pop
+      78: return
+      79: astore_1
+      80: aload_1
+      81: invokevirtual #82                 // Method android/os/RemoteException.printStackTrace:()V
+      84: goto          78
+    Exception table:
+       from    to  target type
+          68    78    79   Class android/os/RemoteException
+
+  public void onServiceDisconnected(android.content.ComponentName);
+    Code:
+       0: iconst_0
+       1: putstatic     #21                 // Field a2dp/Vol/service.mIsBound:Z
+       4: invokestatic  #88                 // Method a2dp/Vol/service.access$600:()La2dp/Vol/MyApplication;
+       7: invokestatic  #92                 // Method a2dp/Vol/service.doUnbind:(Landroid/content/Context;)V
+      10: return
+}
