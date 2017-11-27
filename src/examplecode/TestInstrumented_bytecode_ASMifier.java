@@ -126,6 +126,114 @@ return cw.toByteArray();
 }
 
 //Butecode using ASM:
+public class TestInstrumented {
+
+     public TestInstrumented() { // <init> //()V
+         L1 {
+             aload0 // reference to self
+             invokespecial java/lang/Object <init>(()V);
+             return
+         }
+     }
+
+     public static main(java.lang.String[] arg0) { //([Ljava/lang/String;)V
+         L1 {
+             getstatic java/lang/System.err:java.io.PrintStream
+             ldc "CALL printOne" (java.lang.String)
+             invokevirtual java/io/PrintStream println((Ljava/lang/String;)V);
+         }
+         L2 {
+             invokestatic TestInstrumented printOne(()V);
+         }
+         L3 {
+             getstatic java/lang/System.err:java.io.PrintStream
+             ldc "RETURN printOne" (java.lang.String)
+             invokevirtual java/io/PrintStream println((Ljava/lang/String;)V);
+         }
+         L4 {
+             getstatic java/lang/System.err:java.io.PrintStream
+             ldc "CALL printOne" (java.lang.String)
+             invokevirtual java/io/PrintStream println((Ljava/lang/String;)V);
+         }
+         L5 {
+             invokestatic TestInstrumented printOne(()V);
+         }
+         L6 {
+             getstatic java/lang/System.err:java.io.PrintStream
+             ldc "RETURN printOne" (java.lang.String)
+             invokevirtual java/io/PrintStream println((Ljava/lang/String;)V);
+         }
+         L7 {
+             getstatic java/lang/System.err:java.io.PrintStream
+             ldc "CALL printTwo" (java.lang.String)
+             invokevirtual java/io/PrintStream println((Ljava/lang/String;)V);
+         }
+         L8 {
+             invokestatic TestInstrumented printTwo(()V);
+         }
+         L9 {
+             getstatic java/lang/System.err:java.io.PrintStream
+             ldc "RETURN printTwo" (java.lang.String)
+             invokevirtual java/io/PrintStream println((Ljava/lang/String;)V);
+         }
+         L10 {
+             return
+         }
+     }
+
+     public static printOne() { //()V
+         L1 {
+             getstatic java/lang/System.err:java.io.PrintStream
+             ldc "CALL println" (java.lang.String)
+             invokevirtual java/io/PrintStream println((Ljava/lang/String;)V);
+         }
+         L2 {
+             getstatic java/lang/System.out:java.io.PrintStream
+             ldc "Hello World" (java.lang.String)
+             invokevirtual java/io/PrintStream println((Ljava/lang/String;)V);
+         }
+         L3 {
+             getstatic java/lang/System.err:java.io.PrintStream
+             ldc "RETURN println" (java.lang.String)
+             invokevirtual java/io/PrintStream println((Ljava/lang/String;)V);
+         }
+         L4 {
+             return
+         }
+     }
+
+     public static printTwo() { //()V
+         L1 {
+             getstatic java/lang/System.err:java.io.PrintStream
+             ldc "CALL printOne" (java.lang.String)
+             invokevirtual java/io/PrintStream println((Ljava/lang/String;)V);
+         }
+         L2 {
+             invokestatic TestInstrumented printOne(()V);
+         }
+         L3 {
+             getstatic java/lang/System.err:java.io.PrintStream
+             ldc "RETURN printOne" (java.lang.String)
+             invokevirtual java/io/PrintStream println((Ljava/lang/String;)V);
+         }
+         L4 {
+             getstatic java/lang/System.err:java.io.PrintStream
+             ldc "CALL printOne" (java.lang.String)
+             invokevirtual java/io/PrintStream println((Ljava/lang/String;)V);
+         }
+         L5 {
+             invokestatic TestInstrumented printOne(()V);
+         }
+         L6 {
+             getstatic java/lang/System.err:java.io.PrintStream
+             ldc "RETURN printOne" (java.lang.String)
+             invokevirtual java/io/PrintStream println((Ljava/lang/String;)V);
+         }
+         L7 {
+             return
+         }
+     }
+}
 
 //Bytecode using commnad: javap -c TestInstrumented.class
 Compiled from "TestInstrumented.java"
